@@ -21,6 +21,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         .logo {
             font-size: 24px;
@@ -33,6 +34,7 @@
         .nav-links a {
             color: white;
             text-decoration: none;
+            font-size: 16px;
         }
         .content {
             margin-top: 70px;
@@ -47,8 +49,9 @@
     </div>
     <div class="content">
         <h1>Welcome to Hopyard Farm</h1>
-        <p>This is the main content of your website.</p>
+        <p>This is the main content of your website. You can add more information about Hopyard Farm here.</p>
     </div>
+
     <script>
         fetch('headers.txt')
             .then(response => response.text())
@@ -58,13 +61,13 @@
                 const currentPath = window.location.pathname;
 
                 for (let i = 0; i < lines.length; i += 2) {
-                    const title = lines[i].trim();
+                    const text = lines[i].trim();
                     const path = lines[i + 1].trim();
                     
                     if (path !== currentPath) {
                         const link = document.createElement('a');
                         link.href = `https://hopyardfarm.github.io${path}`;
-                        link.textContent = title;
+                        link.textContent = text;
                         navLinks.appendChild(link);
                     }
                 }
