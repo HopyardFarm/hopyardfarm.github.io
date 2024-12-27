@@ -24,13 +24,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            margin-right: 20px;
-        }
-        .nav-links {
-            display: flex;
-        }
-        .nav-links a {
+        .top-bar a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
@@ -43,20 +37,19 @@
 </head>
 <body>
     <div class="top-bar">
-        <div class="logo">HOPYARD FARM</div>
-        <div class="nav-links" id="navLinks"></div>
+        <span>HOPYARD FARM</span>
+        <div id="navigation"></div>
     </div>
     <div class="content">
         <h1>Welcome to Hopyard Farm</h1>
         <p>This is the main content of your website.</p>
     </div>
-
     <script>
         fetch('header.txt')
             .then(response => response.text())
             .then(data => {
                 const lines = data.split('\n');
-                const navLinks = document.getElementById('navLinks');
+                const navigation = document.getElementById('navigation');
                 const currentPath = window.location.pathname;
 
                 lines.forEach(line => {
@@ -65,7 +58,7 @@
                         const link = document.createElement('a');
                         link.href = path === '/' ? '/' : path;
                         link.textContent = title;
-                        navLinks.appendChild(link);
+                        navigation.appendChild(link);
                     }
                 });
             })
