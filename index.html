@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Hopyard Farm, King George, Virginia, 22485, Ryan Homes, US, USA">
     <meta name="description" content="The official Hopyard Farm neighborhood website.">
@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow">
     <meta name="revised" content="Saturday, December 28th, 2024, 10:31 pm">
     <title>Hopyard Farm Website Home</title>
-    <link rel="icon" href="/images/home-icon-inverted.png" type="image/x-icon"> <!-- Add website icon -->
+    <link rel="icon" href="home-icon-inverted.png" type="image/x-icon"> <!-- Add website icon -->
     <style>
         body {
             margin: 0;
@@ -19,12 +19,14 @@
             background-color: #dae2d8; /* Slightly gray white background */
         }
         .top-bar {
-            background-color: #6fc276; /* Light grey color */
+            background-color: rgba(111, 194, 118, 1); /* Light grey color with 80% translucency */
             overflow: hidden;
             padding: 10px 0; /* Reduce the height of the top bar */
-            border: 6px solid #48854d; /* Add a border around the top bar */
+            border: 4px solid #48854d; /* Add a border around the top bar */
             display: flex;
             align-items: center; /* Center the content vertically */
+            position: relative;
+            z-index: 2; /* Ensure the top bar is above the gradient */
         }
         .top-bar .brand {
             padding: 10px 20px;
@@ -54,18 +56,41 @@
             color: white;
         }
         .content {
+            position: relative;
             display: flex;
-            align-items: center;
-            justify-content: center; /* Center the content horizontally */
-            padding: 20px;
-        }
-        .content > div {
-            margin-right: 40px; /* Increase the space between the text and the image */
+            align-items: flex-start; /* Align items to the top */
+            justify-content: center;
+            height: calc(100vh - 60px); /* Adjust the height to account for the top bar */
+            overflow: hidden;
+            margin-bottom: 500px; /* Add extra space underneath the image */
         }
         .content img {
-            max-width: 50%; /* Adjust the width as needed */
-            height: auto;
-            border: 4px solid #48854d; /* Add a small border to the image */
+            position: absolute;
+            top: 0; /* Position the image at the top */
+            left: 50%; /* Center the image horizontally */
+            transform: translateX(-50%);
+            width: 100%; /* Make the image cover the entire width */
+            height: calc(100vh - 60px); /* Make the image cover the entire height minus the top bar */
+            object-fit: cover; /* Make the image cover the entire screen */
+        }
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.9) 100%);
+            z-index: 1; /* Ensure the gradient is above the image but below the text */
+        }
+        .content .text {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 20px;
+            max-width: 50%;
+            background-color: rgba(0, 0, 0, 0.4); /* 40% translucent black background */
+            margin-top: 20px; /* Add margin to move the text down */
         }
         p {
             font-size: 22px; /* Increase the font size of the paragraph */
@@ -76,24 +101,26 @@
 
 <nav class="top-bar">
     <div class="brand">
-        <img src="/images/Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
+        <img src="Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
         HOPYARD FARM
     </div>
     <div class="links">
-        <a href="https://hopyardfarm.github.io/"><b>Home</b></a>
-        <a href=https://hopyardfarm.github.io/about"><b>About</b></a>
-        <a href="https://hopyardfarm.github.io/history"><b>History</b></a>
-        <a href="https://hopyardfarm.github.io/contact"><b>Contact Us</b></a>
+        <a href="#home"><b>Home</b></a>
+        <a href="#about"><b>About</b></a>
+        <a href="#history"><b>History</b></a>
+        <a href="#contact"><b>Contact Us</b></a>
+        <a href="#newsletters"><b>Newsletters</b></a>
+        <a href="#events"><b>Events</b></a>
+        <a href="#commitees"><b>Commitees</b></a>
     </div>
 </nav>
 
 <div class="content">
-    <div>
-        <h1>Welcome to Hopyard Farm</h1>
+    <div class="text">
+        <h1>Welcome to the Hopyard Farm website</h1>
         <p>Hopyard Farm is located in King George, Virginia.</p>
     </div>
-    <img src="https://bloximages.chicago2.vip.townnews.com/fredericksburg.com/content/tncms/assets/v3/editorial/7/f2/7f2d5e0e-0474-11e5-88b9-5336203febba/5565c71fdb5ed.image.jpg" 
-    alt="Hopyard Farm Clubhouse and Pool" title="Hopyard Farm Clubhouse and Pool">
+    <img src="hopyardfarm-top-view.jpeg" alt="Hopyard Farm Drone View" title="Hopyard Farm Drone View">
 </div>
 
 </body>
