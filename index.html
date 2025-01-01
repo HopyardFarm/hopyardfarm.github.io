@@ -9,9 +9,9 @@
     <meta name='language' content='ES'>
     <meta name="subject" content="Hopyard Farm Website">
     <meta name="robots" content="index, follow">
-    <meta name="revised" content="Wednesday, January 1st, 2025, 5:00 pm">
+    <meta name="revised" content="Wednesday, January 1st, 2025, 5:08 pm">
     <title>Hopyard Farm Website Home</title>
-    <link rel="icon" href="home-icon-inverted.png" type="image/x-icon"> <!-- Add website icon -->
+    <link rel="icon" href="/images/home-icon-inverted.png" type="image/x-icon"> <!-- Add website icon -->
     <style>
         body {
             margin: 0;
@@ -42,8 +42,6 @@
         .top-bar .links {
             margin-left: auto; /* Push the links to the right */
             margin-right: 20px; /* Add padding between the links and the right edge */
-            display: flex;
-            flex-direction: row; /* Display links in a row */
         }
         .top-bar a {
             display: inline-block;
@@ -64,7 +62,6 @@
             justify-content: center;
             height: calc(100vh - 60px); /* Adjust the height to account for the top bar */
             overflow: hidden;
-            margin-bottom: 500px; /* Add extra space underneath the image */
         }
         .content img {
             position: absolute;
@@ -82,7 +79,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.9) 100%);
+            background: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.5) 100%);
             z-index: 1; /* Ensure the gradient is above the image but below the text */
         }
         .content .text {
@@ -91,28 +88,11 @@
             color: white;
             padding: 20px;
             max-width: 50%;
-            background-color: rgba(0, 0, 0, 0.4); /* 40% translucent black background */
+            background-color: rgba(0, 0, 0, 0.5); /* 50% translucent black background */
             margin-top: 20px; /* Add margin to move the text down */
         }
         p {
             font-size: 22px; /* Increase the font size of the paragraph */
-        }
-        @media (max-width: 768px) {
-            .top-bar {
-                flex-direction: column; /* Stack the brand and links vertically */
-                align-items: flex-start; /* Align items to the start */
-            }
-            .top-bar .links {
-                margin-left: 0; /* Reset the left margin */
-                margin-right: 0; /* Reset the right margin */
-                flex-direction: column; /* Stack links vertically */
-                width: 100%; /* Make links take full width */
-            }
-            .top-bar a {
-                width: 100%; /* Make links take full width */
-                text-align: left; /* Align text to the left */
-                padding: 10px 20px; /* Adjust padding */
-            }
         }
     </style>
 </head>
@@ -120,7 +100,7 @@
 
 <nav class="top-bar">
     <div class="brand">
-        <img src="Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
+        <img src="/images/Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
         HOPYARD FARM
     </div>
     <div class="links">
@@ -139,7 +119,7 @@
         <h1>Welcome to the Hopyard Farm website</h1>
         <p>Hopyard Farm is located in King George, Virginia.</p>
     </div>
-    <img src="hopyardfarm-top-view.jpeg" alt="Hopyard Farm Drone View" title="Hopyard Farm Drone View">
+    <img src="/images/hopyardfarm-top-view.jpeg" alt="Hopyard Farm Drone View" title="Hopyard Farm Drone View">
 </div>
 
 </body>
