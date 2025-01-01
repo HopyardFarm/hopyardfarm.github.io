@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Hopyard Farm, King George, Virginia, 22485, Ryan Homes, US, USA">
     <meta name="description" content="The official Hopyard Farm neighborhood website.">
@@ -9,9 +9,9 @@
     <meta name='language' content='ES'>
     <meta name="subject" content="Hopyard Farm Website">
     <meta name="robots" content="index, follow">
-    <meta name="revised" content="Saturday, December 28th, 2024, 10:31 pm">
+    <meta name="revised" content="Wednesday, January 1st, 2025, 5:00 pm">
     <title>Hopyard Farm Website Home</title>
-    <link rel="icon" href="/images/home-icon-inverted.png" type="image/x-icon"> <!-- Add website icon -->
+    <link rel="icon" href="home-icon-inverted.png" type="image/x-icon"> <!-- Add website icon -->
     <style>
         body {
             margin: 0;
@@ -42,6 +42,8 @@
         .top-bar .links {
             margin-left: auto; /* Push the links to the right */
             margin-right: 20px; /* Add padding between the links and the right edge */
+            display: flex;
+            flex-direction: row; /* Display links in a row */
         }
         .top-bar a {
             display: inline-block;
@@ -95,23 +97,40 @@
         p {
             font-size: 22px; /* Increase the font size of the paragraph */
         }
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column; /* Stack the brand and links vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+            .top-bar .links {
+                margin-left: 0; /* Reset the left margin */
+                margin-right: 0; /* Reset the right margin */
+                flex-direction: column; /* Stack links vertically */
+                width: 100%; /* Make links take full width */
+            }
+            .top-bar a {
+                width: 100%; /* Make links take full width */
+                text-align: left; /* Align text to the left */
+                padding: 10px 20px; /* Adjust padding */
+            }
+        }
     </style>
 </head>
 <body>
 
 <nav class="top-bar">
     <div class="brand">
-        <img src="/images/Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
+        <img src="Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
         HOPYARD FARM
     </div>
     <div class="links">
-        <a href="#home"><b>Home</b></a>
-        <a href="#about"><b>About</b></a>
-        <a href="#history"><b>History</b></a>
-        <a href="#contact"><b>Contact Us</b></a>
-        <a href="#newsletters"><b>Newsletters</b></a>
-        <a href="#events"><b>Events</b></a>
-        <a href="#commitees"><b>Commitees</b></a>
+        <a href="https://hopyardfarm.github.io/"><b>Home</b></a>
+        <a href="https://hopyardfarm.github.io/about"><b>About</b></a>
+        <a href="https://hopyardfarm.github.io/history"><b>History</b></a>
+        <a href="https://hopyardfarm.github.io/contact"><b>Contact Us</b></a>
+        <a href="https://hopyardfarm.github.io/newsletters"><b>Newsletters</b></a>
+        <a href="https://hopyardfarm.github.io/events"><b>Events</b></a>
+        <a href="https://hopyardfarm.github.io/commitees"><b>Commitees</b></a>
     </div>
 </nav>
 
@@ -120,7 +139,7 @@
         <h1>Welcome to the Hopyard Farm website</h1>
         <p>Hopyard Farm is located in King George, Virginia.</p>
     </div>
-    <img src="/images/hopyardfarm-top-view.jpeg" alt="Hopyard Farm Drone View" title="Hopyard Farm Drone View">
+    <img src="hopyardfarm-top-view.jpeg" alt="Hopyard Farm Drone View" title="Hopyard Farm Drone View">
 </div>
 
 </body>
