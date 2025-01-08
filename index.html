@@ -16,6 +16,21 @@
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #dae2d8;
+            overflow-y: scroll; /* Ensure scrollbar is always visible */
+        }
+        /* Scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 12px; /* Width of the scrollbar */
+        }
+        ::-webkit-scrollbar-track {
+            background: #333; /* Background of the scrollbar track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #555; /* Color of the scrollbar thumb */
+            border-radius: 6px; /* Rounded corners for the thumb */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #777; /* Color of the thumb on hover */
         }
         .top-bar {
             background-color: rgba(111, 194, 118, 1);
@@ -60,7 +75,7 @@
             align-items: flex-start;
             justify-content: center;
             height: calc(100vh - 60px);
-            overflow: auto; /* Changed from hidden to auto to allow scrolling */
+            overflow: hidden;
             margin-bottom: 500px;
         }
         .content img {
@@ -126,4 +141,95 @@
                 height: 100%;
                 width: 0;
                 position: fixed;
-               
+                z-index: 3;
+                top: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+            .side-menu a {
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+            }
+            .side-menu a:hover {
+                background-color: #68b16e;
+            }
+            .side-menu .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 36px;
+            }
+            .content .text h1 {
+                font-size: 24px;
+            }
+            .content .text p {
+                font-size: 16px;
+            }
+        }
+        @media (min-width: 769px) {
+            .menu-icon, .side-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-bar">
+    <div class="brand">
+        <img src="\images\Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
+        HOPYARD FARM
+    </div>
+    <div class="menu-icon" onclick="openMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="links">
+        <a href="https://hopyardfarm.github.io"><b>Home</b></a>
+        <a href="https://hopyardfarm.github.io/about"><b>About</b></a>
+        <a href="https://hopyardfarm.github.io/history"><b>History</b></a>
+        <a href="https://hopyardfarm.github.io/contact"><b>Contact Us</b></a>
+        <a href="https://hopyardfarm.github.io/newsletters"><b>Newsletters</b></a>
+        <a href="https://hopyardfarm.github.io/events"><b>Events</b></a>
+        <a href="https://hopyardfarm.github.io/commitees"><b>Commitees</b></a>
+    </div>
+</nav>
+
+<div id="side-menu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="https://hopyardfarm.github.io"><b>Home</b></a>
+    <a href="https://hopyardfarm.github.io/about"><b>About</b></a>
+    <a href="https://hopyardfarm.github.io/history"><b>History</b></a>
+    <a href="https://hopyardfarm.github.io/contact"><b>Contact Us</b></a>
+    <a href="https://hopyardfarm.github.io/newsletters"><b>Newsletters</b></a>
+    <a href="https://hopyardfarm.github.io/events"><b>Events</b></a>
+    <a href="https://hopyardfarm.github.io/commitees"><b>Commitees</b></a>
+</div>
+
+<div class="content">
+    <div class="text">
+        <h1>Welcome to Hopyard Farm</h1>
+        <p>Hopyard Farm is a thriving neighborhood located in King George, Virginia.</p>
+    </div>
+    <img src="\images\hopyardfarm-top-view.jpeg" alt="Hopyard Farm Drone View" title="Hopyard Farm Drone View">
+</div>
+
+<script>
+    function openMenu() {
+        document.getElementById("side-menu").style.width = "250px";
+    }
+    function closeMenu() {
+        document.getElementById("side-menu").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
