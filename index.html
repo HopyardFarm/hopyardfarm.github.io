@@ -11,44 +11,44 @@
     <meta name="revised" content="Tuesday, January 7th, 2025, 7:20 pm">
     <title>Hopyard Farm Website Home</title>
     <link rel="icon" href="\images\home-icon-inverted.png" type="image/x-icon">
-        <style>
+    <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f4ef;
+            font-family: Arial, sans-serif; /* Ensure consistent font */
+            background-color: #dae2d8; /* Slightly gray white background */
         }
         .top-bar {
-            background-color: rgba(111, 194, 118, 0.9);
+            background-color: rgba(111, 194, 118, 1); /* Light grey color with 80% translucency */
             overflow: hidden;
-            padding: 8px 0;
-            border: 3px solid #48854d;
+            padding: 10px 0; /* Reduce the height of the top bar */
+            border: 4px solid #48854d; /* Add a border around the top bar */
             display: flex;
-            align-items: center;
+            align-items: center; /* Center the content vertically */
             position: relative;
-            z-index: 2;
+            z-index: 2; /* Ensure the top bar is above the gradient */
         }
         .top-bar .brand {
-            padding: 8px 16px;
-            font-size: 18px;
+            padding: 10px 20px;
+            font-size: 20px;
             font-weight: bold;
             color: white;
         }
         .top-bar .brand img {
             vertical-align: middle;
-            height: 36px;
-            margin-right: 8px;
+            height: 40px; /* Adjust the height as needed */
+            margin-right: 10px; /* Space between the logo and text */
         }
         .top-bar .links {
-            margin-left: auto;
-            margin-right: 16px;
+            margin-left: auto; /* Push the links to the right */
+            margin-right: 20px; /* Add padding between the links and the right edge */
         }
         .top-bar a {
             display: inline-block;
             color: white;
             text-align: center;
-            padding: 8px 12px;
+            padding: 10px 15px; /* Adjust the padding to fit the new bar size */
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px; /* Adjust the font size */
         }
         .top-bar a:hover {
             background-color: #68b16e;
@@ -57,22 +57,22 @@
         .content {
             position: relative;
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* Align items to the top */
             justify-content: center;
-            height: calc(100vh - 56px);
+            height: calc(100vh - 60px); /* Adjust the height to account for the top bar */
             overflow: hidden;
-            margin-bottom: 400px;
+            margin-bottom: 500px; /* Add extra space underneath the image */
         }
         .content img {
             position: absolute;
-            top: 0;
-            left: 50%;
+            top: 0; /* Position the image at the top */
+            left: 50%; /* Center the image horizontally */
             transform: translateX(-50%);
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            aspect-ratio: 2410 / 670;
-            filter: brightness(80%);
+            width: 100%; /* Make the image cover the entire width */
+            height: auto; /* Adjust the height to auto */
+            object-fit: contain; /* Ensure the entire image is visible */
+            aspect-ratio: 2410 / 670; /* Set the new aspect ratio */
+            filter: brightness(75%); /* Darken the image by 50% */
         }
         .content::before {
             content: '';
@@ -80,34 +80,31 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 61.5%;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.8) 100%);
-            z-index: 1;
+            height: 61.5%; /* Adjust the height to cover the entire image */
+            background: radial-gradient(circle, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.85) 100%); /* Reduce gradient strength */
+            z-index: 1; /* Ensure the gradient is above the image but below the text */
         }
         .content .text {
             position: relative;
             z-index: 2;
             color: white;
-            padding: 16px;
+            padding: 20px;
             max-width: 50%;
-            background-color: rgba(0, 0, 0, 0.4);
-            margin-top: 16px;
+            background-color: rgba(0, 0, 0, 0.4); /* 40% translucent black background */
+            margin-top: 20px; /* Add margin to move the text down */
         }
-        .content .text h1 {
-            font-size: 28px;
-        }
-        .content .text p {
-            font-size: 20px;
+        p {
+            font-size: 22px; /* Increase the font size of the paragraph */
         }
         @media (max-width: 768px) {
             .top-bar {
-                padding: 4px 0;
+                padding: 5px 0;
                 border: none;
                 justify-content: space-between;
             }
             .top-bar .brand {
-                padding: 4px 8px;
-                font-size: 16px;
+                padding: 5px 10px;
+                font-size: 18px;
             }
             .top-bar .links {
                 display: none;
@@ -115,12 +112,12 @@
             .menu-icon {
                 display: block;
                 cursor: pointer;
-                padding: 8px;
-                margin-right: 16px;
+                padding: 10px;
+                margin-right: 20px;
             }
             .menu-icon div {
-                width: 22px;
-                height: 2px;
+                width: 25px;
+                height: 3px;
                 background-color: white;
                 margin: 4px 0;
             }
@@ -137,9 +134,9 @@
                 padding-top: 60px;
             }
             .side-menu a {
-                padding: 8px 12px;
+                padding: 10px 15px;
                 text-decoration: none;
-                font-size: 16px;
+                font-size: 18px;
                 color: white;
                 display: block;
                 transition: 0.3s;
@@ -149,15 +146,9 @@
             }
             .side-menu .close-btn {
                 position: absolute;
-                top: 8px;
-                right: 20px;
-                font-size: 32px;
-            }
-            .content .text h1 {
-                font-size: 24px;
-            }
-            .content .text p {
-                font-size: 18px;
+                top: 10px;
+                right: 25px;
+                font-size: 36px;
             }
         }
         @media (min-width: 769px) {
