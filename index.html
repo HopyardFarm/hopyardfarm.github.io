@@ -8,47 +8,47 @@
     <meta name="author" content="Hopyard Farm, hopyard.website@yahoo.com">
     <meta name='language' content='ES'>
     <meta name="robots" content="index, follow">
-    <meta name="revised" content="Saturday, December 28th, 2024, 10:31 pm">
+    <meta name="revised" content="Tuesday, January 7th, 2025, 7:20 pm">
     <title>Hopyard Farm Website Home</title>
     <link rel="icon" href="\images\home-icon-inverted.png" type="image/x-icon">
-    <style>
+        <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #dae2d8;
+            background-color: #f0f4ef;
         }
         .top-bar {
-            background-color: rgba(111, 194, 118, 1);
+            background-color: rgba(111, 194, 118, 0.9);
             overflow: hidden;
-            padding: 10px 0;
-            border: 4px solid #48854d;
+            padding: 8px 0;
+            border: 3px solid #48854d;
             display: flex;
             align-items: center;
             position: relative;
             z-index: 2;
         }
         .top-bar .brand {
-            padding: 10px 20px;
-            font-size: 20px;
+            padding: 8px 16px;
+            font-size: 18px;
             font-weight: bold;
             color: white;
         }
         .top-bar .brand img {
             vertical-align: middle;
-            height: 40px;
-            margin-right: 10px;
+            height: 36px;
+            margin-right: 8px;
         }
         .top-bar .links {
             margin-left: auto;
-            margin-right: 20px;
+            margin-right: 16px;
         }
         .top-bar a {
             display: inline-block;
             color: white;
             text-align: center;
-            padding: 10px 15px;
+            padding: 8px 12px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
         }
         .top-bar a:hover {
             background-color: #68b16e;
@@ -59,9 +59,9 @@
             display: flex;
             align-items: flex-start;
             justify-content: center;
-            height: calc(100vh - 60px);
+            height: calc(100vh - 56px);
             overflow: hidden;
-            margin-bottom: 500px;
+            margin-bottom: 400px;
         }
         .content img {
             position: absolute;
@@ -69,8 +69,10 @@
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            height: calc(100vh - 60px);
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
+            aspect-ratio: 2410 / 670;
+            filter: brightness(80%);
         }
         .content::before {
             content: '';
@@ -78,31 +80,34 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.9) 100%);
+            height: 61.5%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.8) 100%);
             z-index: 1;
         }
         .content .text {
             position: relative;
             z-index: 2;
             color: white;
-            padding: 20px;
+            padding: 16px;
             max-width: 50%;
             background-color: rgba(0, 0, 0, 0.4);
-            margin-top: 20px;
+            margin-top: 16px;
         }
-        p {
-            font-size: 22px;
+        .content .text h1 {
+            font-size: 28px;
+        }
+        .content .text p {
+            font-size: 20px;
         }
         @media (max-width: 768px) {
             .top-bar {
-                padding: 5px 0;
+                padding: 4px 0;
                 border: none;
                 justify-content: space-between;
             }
             .top-bar .brand {
-                padding: 5px 10px;
-                font-size: 18px;
+                padding: 4px 8px;
+                font-size: 16px;
             }
             .top-bar .links {
                 display: none;
@@ -110,12 +115,12 @@
             .menu-icon {
                 display: block;
                 cursor: pointer;
-                padding: 10px;
-                margin-right: 20px;
+                padding: 8px;
+                margin-right: 16px;
             }
             .menu-icon div {
-                width: 25px;
-                height: 3px;
+                width: 22px;
+                height: 2px;
                 background-color: white;
                 margin: 4px 0;
             }
@@ -132,9 +137,9 @@
                 padding-top: 60px;
             }
             .side-menu a {
-                padding: 10px 15px;
+                padding: 8px 12px;
                 text-decoration: none;
-                font-size: 18px;
+                font-size: 16px;
                 color: white;
                 display: block;
                 transition: 0.3s;
@@ -144,9 +149,15 @@
             }
             .side-menu .close-btn {
                 position: absolute;
-                top: 10px;
-                right: 25px;
-                font-size: 36px;
+                top: 8px;
+                right: 20px;
+                font-size: 32px;
+            }
+            .content .text h1 {
+                font-size: 24px;
+            }
+            .content .text p {
+                font-size: 18px;
             }
         }
         @media (min-width: 769px) {
