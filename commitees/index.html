@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Hopyard Farm, King George, Virginia, Neighborhood, Ryan Homes, Hopyard Farms, 22485, US, USA">
+    <meta name="description" content="The official Hopyard Farm neighborhood website.">
+    <meta name="author" content="Hopyard Farm, hopyard.website@yahoo.com">
+    <meta name='language' content='ES'>
+    <meta name="robots" content="index, follow">
+    <meta name="revised" content="Tuesday, January 7th, 2025, 6:55 pm">
+    <title>Hopyard Farm Website Home</title>
+    <link rel="icon" href="../images\home-icon-inverted.png" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            max-width: 50%;
+            max-height: 50%;
+        }
+        .top-bar {
+            background-color: rgba(111, 194, 118, 1);
+            overflow: hidden;
+            padding: 10px 0;
+            border: 4px solid #48854d;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+        .top-bar .brand {
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        .top-bar .brand img {
+            vertical-align: middle;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .top-bar .links {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+        .top-bar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .top-bar a:hover {
+            background-color: #68b16e;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 5px 0;
+                border: none;
+                justify-content: space-between;
+            }
+            .top-bar .brand {
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+            .top-bar .links {
+                display: none;
+            }
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+                padding: 10px;
+                margin-right: 20px;
+            }
+            .menu-icon div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                margin: 4px 0;
+            }
+            .side-menu {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 3;
+                top: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+            .side-menu a {
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+            }
+            .side-menu a:hover {
+                background-color: #68b16e;
+            }
+            .side-menu .close-btn {
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 36px;
+            }
+        }
+        @media (min-width: 769px) {
+            .menu-icon, .side-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="top-bar">
+    <div class="brand">
+        <img src="../images\Hopyard_Sign-nobg-crop.png" alt="Hopyard Farm Logo">
+        HOPYARD FARM
+    </div>
+    <div class="menu-icon" onclick="openMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="links">
+        <a href="https://hopyardfarm.github.io"><b>Home</b></a>
+        <a href="https://hopyardfarm.github.io/about"><b>About</b></a>
+        <a href="https://hopyardfarm.github.io/history"><b>History</b></a>
+        <a href="https://hopyardfarm.github.io/contact"><b>Contact Us</b></a>
+        <a href="https://hopyardfarm.github.io/newsletters"><b>Newsletters</b></a>
+        <a href="https://hopyardfarm.github.io/events"><b>Events</b></a>
+        <a href="https://hopyardfarm.github.io/commitees"><b>Commitees</b></a>
+    </div>
+</nav>
+
+<div id="side-menu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+    <a href="https://hopyardfarm.github.io"><b>Home</b></a>
+    <a href="https://hopyardfarm.github.io/about"><b>About</b></a>
+    <a href="https://hopyardfarm.github.io/history"><b>History</b></a>
+    <a href="https://hopyardfarm.github.io/contact"><b>Contact Us</b></a>
+    <a href="https://hopyardfarm.github.io/newsletters"><b>Newsletters</b></a>
+    <a href="https://hopyardfarm.github.io/events"><b>Events</b></a>
+    <a href="https://hopyardfarm.github.io/commitees"><b>Commitees</b></a>
+</div>
+
+<script>
+    function openMenu() {
+        document.getElementById("side-menu").style.width = "250px";
+    }
+    function closeMenu() {
+        document.getElementById("side-menu").style.width = "0";
+    }
+</script>
+
+<img src="../images/under_development.jpg" alt="Under Development">
+</body>
